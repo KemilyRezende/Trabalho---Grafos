@@ -8,7 +8,13 @@
   
 ## Grafos
 
-  <p>Grafos são estruturas de dados comumente representados por G = (V, E), onde V é o conjunto dos vértices (ou nós) de um grafo e E o conjunto das arestas. Cada aresta tem um ou dois vértices associados a si, sendo eles as suas extremidades. </p>
+  <p>Grafos são estruturas de dados comumente representados por G = (V, E), onde V é o conjunto dos vértices (ou nós) de um grafo e E o conjunto das arestas. Cada aresta tem um ou dois vértices associados a si, sendo eles as suas extremidades. Para uma melhor compreensão é interessante pensar na conexão de amigos em uma rede social: </p>
+  <img >
+  <p>Cada usuário pode ser considerado um vértice e cada aresta representa que há conexão entre o par. Este é um exemplo básico de grafo simples não ordenado.</p>
+  <p>Outra maneira muito simples de representar grafos é utilizando Listas de Adjacências, estas demonstram quais vértices são adjacentes a um determinado vértice. A lista de adjacência do grafo já mostrado seria este:</p>
+  <img >
+  <p>Quando há muitas arestas no grafo o uso de listas de adjacência pode se tornar incômodo, para contornar este problema grafos podem ser representados como Matrizes de adjacência. Nestas quando dois vértices se conectam o valor 1 é armazenado no local indicado, quando não o valor 0. Segue a matriz de adjacência do grafo apresentado:</p>
+  <img >
 
 ## Métodos de busca
 ### BFS
