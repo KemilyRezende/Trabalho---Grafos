@@ -21,6 +21,8 @@
 
 ### DFS
 
+## Árvore geradora mínima
+
 ## Algorítmo de Kruskal
 
 ## Funcionamento do algorítmo proposto
