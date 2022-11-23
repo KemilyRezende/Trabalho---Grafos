@@ -26,13 +26,22 @@
   <p>Esta é uma aplicação recursiva sendo representada pelo algorítmo a seguir:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Profundidade.png" height = "300px" width = "400px"></p>
   <p>É conhecido que este algorítmo possuium custto computacional equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
+  
 ### Busca em Largura
-  <p></p>
+
+  <p>O ponto de partida para o método de Busca em Largura é também escolher de forma arbitrária um vértice de G para ser a raiz. </p>
+  
 ## Árvore geradora mínima
+
+  <p></p>
 
 ## Algorítmo de Kruskal
 
+<p></p>
+
 ## Funcionamento do algorítmo proposto
+
+<p></p>
 
 ## Referências
 
