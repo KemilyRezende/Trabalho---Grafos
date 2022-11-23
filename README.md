@@ -22,7 +22,9 @@
 
 ### Busca em Profundidade
 
-  <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice </p>
+  <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice, este será a raiz. Partindo deste forma-se o caminho adicionando arestas e vértices, cada aresta é incidente do último vértice visitado a um vérticeque ainda não tenha sido adicionado à arvore. Segue-se fazendo isto enquanto possível, se todos os vértices foram visitados, a árvore está pronta, caso contrário deve-se retornar ao penúltimo vértice adicionado e repetir o mesmo procedimento e assim sucessivamente até que todos os vértices tenham sido visitados.</p>
+  <p>Note que esta é uma aplicação recursiva sendo representada pelo algorítmo a seguir:</p>
+  <img src="" height = "" width = "">
   
 ### Busca em Largura
   <p></p>
