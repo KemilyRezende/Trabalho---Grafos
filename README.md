@@ -16,10 +16,12 @@
   <p>Quando há muitas arestas no grafo o uso de listas de adjacência pode se tornar incômodo, para contornar este problema grafos podem ser representados como Matrizes de adjacência. Nestas quando dois vértices se conectam o valor 1 é armazenado no local indicado, quando não o valor 0. Segue a matriz de adjacência do grafo apresentado:</p>
   <img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Matriz%20de%20Adjac%C3%AAncia.png" width="450px" height="450px">
 
-## Métodos de busca
-### BFS
-
-### DFS
+## Árvores Geradoras
+<p>Uma Árvore Geradora é um subgrafo de um grafo simples conexo G qualquer que possua todos os vértices de G, entretanto, não há ciclos nesta, portanto, há apenas um caminho entre dois vértices v<sub>0</sub> v<sub>n</sub>.</p>
+<p>Uma maneira de gerar uma árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
+### Busca em Profundidade
+  <p></p>
+### Busca em Largura
 
 ## Árvore geradora mínima
 
