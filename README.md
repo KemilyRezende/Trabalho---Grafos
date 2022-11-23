@@ -19,8 +19,11 @@
 ## Árvores Geradoras
 <p>Uma Árvore Geradora é um subgrafo de um grafo simples conexo G qualquer que possua todos os vértices de G, entretanto, não há ciclos nesta, portanto, há apenas um caminho entre dois vértices v<sub>0</sub> v<sub>n</sub>.</p>
 <p>Uma maneira de gerar uma árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
+
 ### Busca em Profundidade
+
   <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice </p>
+  
 ### Busca em Largura
   <p></p>
 ## Árvore geradora mínima
