@@ -17,6 +17,7 @@
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Matriz%20de%20Adjac%C3%AAncia.png" width="350px" height="350px"></p>
   <p>Grafos podem ainda ser representados por Matrizes de Incidência na formatação Vértice x Aresta. Quando uma aresta é incidente a um vértice a referente posição V x A será preenchida com 1, caso contrário com 0. Segue a representação do grafo apresentado em uma Matriz de Incidência:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Matriz%20de%20Incid%C3%AAncia.png" height="380px" width="350px"></p>
+  
 ## Árvores Geradoras
 <p>Uma Árvore Geradora é um subgrafo de um grafo simples conexo G qualquer que possua todos os vértices de G, entretanto, não há ciclos nesta, portanto, há apenas um caminho entre dois vértices v<sub>0</sub> e v<sub>n</sub>.</p>
 <p>Uma maneira de gerar uma árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
@@ -35,13 +36,7 @@
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Largura.png" height = "300px" width = "400px"></p>
   <p>Assim como no método de Busca em Profundidade o custo computacional é equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
   
-## Árvore geradora mínima
-
-  <p></p>
-
-## Algorítmo de Kruskal
-
-<p></p>
+## 
 
 ## Funcionamento do algorítmo proposto
 
