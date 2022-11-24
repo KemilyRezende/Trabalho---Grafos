@@ -36,9 +36,15 @@
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Largura.png" height = "300px" width = "400px"></p>
   <p>Assim como no método de Busca em Profundidade o custo computacional é equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
   
-## 
+## Codificação de Huffman
+
+<p>Outra maneira de se construir uma árvore é com a utilização do Código de Huffman. Desenvolvido em 1951 por David Huffman trata-se de um algorítmo criado para comprensão de dados, ou seja, redução de número de bits necessários para representar uma informação</p>
 
 ## Funcionamento do algorítmo proposto
+
+<p></p>
+
+## Conclusão
 
 <p></p>
 
