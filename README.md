@@ -4,7 +4,7 @@
 
   <p>Este trabalho possui como cerne calcular a quantidade mínima de roteadores para cobrir o acesso à internet em uma área.</p>
   <p>Tal problema pode facilmente aplicar-se em ambientes corporativos, escolares ou até mesmo domésticos. A título de exemplo pode ser tomada a seguinte situação: Um diretor deseja garantir que em todas as salas de uma escola seja possível acessar à internet, para isso é necessário encontrar as áreas de cobertura partindo de cada ponto considerando os obstáculos para a transmissão do sinal, e então determinar a quantidade de roteadores necessária para que o acesso seja satisfatório.</p
-  <p>O mapeamento deste problema pode ser executado através de um grafo não-direcionado com pesos nas arestsas, onde cada vértice representará uma sala e cada aresta os pares de salas que podem ser atendidos pelo mesmo roteador cujos pesos representariam a intensidade do sinal.</p>
+  <p>O mapeamento deste problema pode ser executado através de um grafo não-direcionado com pesos nas arestas, onde cada vértice representará uma sala e cada aresta os pares de salas que podem ser atendidos pelo mesmo roteador cujos pesos representariam a intensidade do sinal.</p>
   
 ## Grafos
 
@@ -15,7 +15,8 @@
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Lista%20de%20Adjac%C3%AAncia.png" width="230px" height="400px"></p>
   <p>Quando há muitas arestas no grafo o uso de listas de adjacência pode se tornar incômodo, para contornar este problema grafos podem ser representados como Matrizes de adjacência. Nestas quando dois vértices se conectam o valor 1 é armazenado no local indicado, quando não o valor 0. Segue a matriz de adjacência do grafo apresentado:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Matriz%20de%20Adjac%C3%AAncia.png" width="350px" height="350px"></p>
-
+  <p>Grafos podem ainda ser representados por Matrizes de Incidência na formatação Vértice x Aresta. Quando uma aresta é incidente a um vértice a referente posição V x A será preenchida com 1, caso contrário com 0. Segue a representação do grafo apresentado em uma Matriz de Incidência:</p>
+  <p align="center"><img src="" height="" width=""></p>
 ## Árvores Geradoras
 <p>Uma Árvore Geradora é um subgrafo de um grafo simples conexo G qualquer que possua todos os vértices de G, entretanto, não há ciclos nesta, portanto, há apenas um caminho entre dois vértices v<sub>0</sub> e v<sub>n</sub>.</p>
 <p>Uma maneira de gerar uma árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
