@@ -24,13 +24,16 @@
 ### Busca em Profundidade
 
   <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice, este será a raiz. Partindo deste forma-se o caminho adicionando arestas e vértices, cada aresta é incidente do último vértice visitado a um vérticeque ainda não tenha sido adicionado à arvore. Segue-se fazendo isto enquanto possível, se todos os vértices foram visitados, a árvore está pronta, caso contrário deve-se retornar ao penúltimo vértice adicionado e repetir o mesmo procedimento e assim sucessivamente até que todos os vértices tenham sido visitados.</p>
-  <p>Esta é uma aplicação recursiva sendo representada pelo algorítmo a seguir:</p>
+  <p>Esta é uma aplicação recursiva sendo representada pelo pseudoalgorítmo a seguir:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Profundidade.png" height = "300px" width = "400px"></p>
-  <p>É conhecido que este algorítmo possuium custto computacional equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
+  <p>É conhecido que este algorítmo possui um custo computacional equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
   
 ### Busca em Largura
 
-  <p>O ponto de partida para o método de Busca em Largura é também escolher de forma arbitrária um vértice de G para ser a raiz. </p>
+  <p>O ponto de partida para o método de Busca em Largura é também escolher de forma arbitrária um vértice de G para ser a raiz. Diferentemente do método anterior, todos os vértices inidentes do vértice atual serão adicionados à árvore, os novos vértices estarão em nível 1. Em seguida é necessário ordena-los arbitrariamente e repetir o procedimento para cada um deles, ao fim do procedimentoos novos vértices estarão em nível 2 e assim é feito sucessivamente até que todos os vértices estejam inseridos na árvore.</p>
+  <p>O método de Busca em largura pode ser representado pelo pseudoalgorítmo a seguir:</p>
+  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Largura.png" height = "300px" width = "400px"></p>
+  <p>Assim como no método de Busca em Profundidade o custo computacional é equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
   
 ## Árvore geradora mínima
 
