@@ -38,7 +38,10 @@
   
 ## Codificação de Huffman
 
-<p>Outra maneira de se construir uma árvore é com a utilização do Código de Huffman. Desenvolvido em 1951 por David Huffman trata-se de um algorítmo criado para comprensão de dados, ou seja, redução de número de bits necessários para representar uma informação</p>
+  <p>Outra maneira de se construir uma árvore é com a utilização do Código de Huffman. Desenvolvido em 1951 por David Huffman trata-se de um algorítmo criado para comprensão de dados, ou seja, redução de número de bits necessários para representar uma informação.</p>
+  <p>Para compreender o funcionamento deste algorítmo é importante apresentar o termo Floresta, este é usado para designar um conjunto de árvores. É exatamente este o ponto de oartida para a formação da árvore de Huffman. Tenha em mente a seguinte situação: É desejado aplicar codificação de Huffman a um texto. Cada palavra será contabilizada em relação a sua frequência no texto e guardada em um vértice, estes serão alocados em um vector ordenado como árvores formando assim a floresta, isto feito, pares serão tomados para a construção da árvore e a dupla será substituída no vector pela sua união. Ao fim do procedimento, quando o vector tiver tamanho 1 a árvore de Huffman estará completa. Note que esta é construída de forma invertida, das folhas para a raiz.</p>
+  <p>Segue o pseudoalgorítmo para a construção da árvore de Huffman considerando o exemplo dado:</p>
+  <p align="center"><img src="" height = "300px" width = "400px"></p>
 
 ## Funcionamento do algorítmo proposto
 
