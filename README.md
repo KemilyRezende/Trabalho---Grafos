@@ -46,11 +46,39 @@
 
 ## Funcionamento do algorítmo proposto
 
-<p></p>
+  <p>Para solucionar o problema foi tomada a modelagem com um grafo não ordenado representado com base no modelo de Matriz de Incidência, para calcular a quantidade mínima de roteadores foram utilizadas técnicas da árvore de Huffman.</p>
+  <p>Como problema modelo foi tomado o seguinte ambiente:</p>
+  <p>As linhas internas indicam o grau de dificuldade para a propagação de sinal e as arestas a qualidade do mesmo entre cada vértice como indicado pela legenda. Todas as aplicações serão exemplificadas graficamente com base neste modelo.</p>
+
+### A construção do grafo:
+
+  <p>Para fins de otimização de memória os vértices, representados pela classe Vertex, não possuem um vector de vértices pois toda a manpulação de dados toma por base as arestas, estas são representadas pela classe Edge tendo como dados os dois vértices ligados e a força do sinal, este varia de 1-5, sendo 1 a pior frequeência e 5 a melhor. Dentro da classe Graph, que representa o grafo, as arestas são alocadas em um vectores de suas respectivas classes.</p>
+  <p>Na função main (arquivo main.cpp) é possível ver trechos de código comentado, estes são adaptações para que o algorítmo receba manualmente outros modelos de grafos.</p>
+  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Grafo%20Modelo.PNG" height = "300px" width = "400px"></p>
+  
+### Funções cmp:
+
+  <p>As funções cmpEdge e cmpGraph (arquivo main.cpp) são utilizadas como parâmetros para a função qsort. A primeira é utilizada para ordenar o vector das Arestas de forma decrescente, após a ordenação este é utilizado no cálculo da quantidade mínima de roteadores. A segunda é utilizada para ordenar de forma crescente o vector Forest, utilizado diretamente com as técnicas de Huffman para solucionar o problema proposto.</p>
+  
+### Huffman e cálculo de roteadores:
+
+  <p>Este algorítmo vale-se em muito das técnicas de Huffman, diferenciando-se em suas condições de encerramento e na formação de uma árvore não binária.</p>
+  <p>A princípio os vértices do grafo são armazenados como grafos no vector Forest, formando assim a Floresta Inicial. Após isto, o vector ordenado das arestas é utilizado para estabelecer as ligações entre os vértices.</p>
+  <p>Um loop é iniciado para calcular a quantidade mínima de roteadores necessária para cobrir a área mapeada pelo grafo inicial. Em cada interação o primeiro item do vértice das arestas é utilizado para buscar os vértices conectados. Um dos vértices precisa ser uma subgrafo com apenas um item pois ao mesclar subgrafos pontos cegos desconhecidos poderiam surgir. Ao encontrar um dos vértices atendendo a estas características o outro pode estar inserido em um subgrafo, um novo subgrafo é criado com os vértices dos dois subgrafos (o que possui v<sub>x</sub> e o que possui v<sub>y</sub>) e em seguida ambos são deletados e substituídos pelo novo. A cada interação o primeiro item do vértice das arestas é deletado. Há duas condições de encerramento para este loop, quando o vector Forest tiver tamanho igual a 2, condição em que há apenas duas áreas de cobertura, ou quando o valor da aresta analisada é menor ou igual a 2, sendo uma frequência muito baixa para garantir acesso à internet de qualidade. Seguem as ilustrações para a melhor compreensão do algorítmo:</p>
+  
+  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Vector%20ordenado.png" height = "150px" width = "400px"></p>
+  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Funcionamento%20Huffman.png" height = "300px" width = "400px"></p>
+  
+  <p>Após executar esta etapa são contabilizados os pontos cegos da área, ou seja, subgrafos de apenas um vértice restantes e são exibidas para o usuário a quantidade de roteadores necessários (Tamanho do vector Forest - quantidade de pontos cegos), as áreas de cobertura e quais são os pontos cegos. Para o problema modelo os resultados são:p>
+  <p>   São necessários 2 roteadores.</p>
+  <p>   Área de cobertura 1: vértice 2, vértice 1</p>
+  <p>   Área de cobertura 2: vértice 4, vértice 3, vértice 5</p>
+  <p>   Pontos cegos: vértice 6</p>
 
 ## Conclusão
 
-<p></p>
+ <p>Após os procedimentos de pesquisa e aplicação em um modelo utilizando o algorítmo proposto afere-se que os objetivos do trabalho, compreensão do funcionamento da estrutura de dados em questão e aplicação da mesma em um problema real, foram atendidos.</p>
+ <p>Para trabalhos futuros é valido a proposição de um algorítmo que possibilite a mesclagem de subgrafos sem que haja surgimento de pontos cegos não previstos.</p>
 
 ## Referências
 
