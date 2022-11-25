@@ -180,8 +180,8 @@ int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int values, aux = 1; //
 	//int v1, v2, signal, op = 0;
-	cout << "V�rtices no Grafo: ";
-	cin >> values;
+	cout << "V�rtices no Grafo: 6";
+	values = 6;
 	for (int i = 0; i < values; i++){
 		Vertex v;
 		v.value = aux;
