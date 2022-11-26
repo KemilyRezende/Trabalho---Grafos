@@ -19,12 +19,13 @@
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Matriz%20de%20Incid%C3%AAncia.png" height="380px" width="350px"></p>
   
 ## Árvores Geradoras
+
 <p>Uma Árvore Geradora é um subgrafo de um grafo simples conexo G qualquer que possua todos os vértices de G, entretanto, não há ciclos nesta, portanto, há apenas um caminho entre dois vértices v<sub>0</sub> e v<sub>n</sub>.</p>
-<p>Uma maneira de gerar uma árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
+<p>Uma maneira de construir a árvore geradora de um grafo é remover as arestas que criam ciclos, entretanto este não é um método eficiente. Dois métodos melhores a serem destacados são a Busca em Profundidade (DFS) e Busca em Largura (BFS).</p>
 
 ### Busca em Profundidade
 
-  <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice, este será a raiz. Partindo deste forma-se o caminho adicionando arestas e vértices, cada aresta é incidente do último vértice visitado a um vérticeque ainda não tenha sido adicionado à arvore. Segue-se fazendo isto enquanto possível, se todos os vértices foram visitados, a árvore está pronta, caso contrário deve-se retornar ao penúltimo vértice adicionado e repetir o mesmo procedimento e assim sucessivamente até que todos os vértices tenham sido visitados.</p>
+  <p>Para obter a árvore geradora por este método escolhe-se arbitrariamente um vértice, este será a raiz. Partindo deste forma-se o caminho adicionando arestas e vértices, cada aresta é incidente do último vértice visitado a um vértice que ainda não tenha sido adicionado à arvore. Segue-se fazendo isto enquanto possível, se todos os vértices foram visitados, a árvore está pronta, caso contrário deve-se retornar ao penúltimo vértice adicionado e repetir o mesmo procedimento e assim sucessivamente até que todos os vértices tenham sido visitados.</p>
   <p>Esta é uma aplicação recursiva sendo representada pelo pseudoalgorítmo a seguir:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Busca%20em%20Profundidade.png" height = "300px" width = "400px"></p>
   <p>É conhecido que este algorítmo possui um custo computacional equivalente a O(E) ou O(V<sup>2</sup>), onde E representa a número de restas e V o número de vértices.</p>
@@ -39,22 +40,22 @@
 ## Codificação de Huffman
 
   <p>Outra maneira de se construir uma árvore é com a utilização do Código de Huffman. Desenvolvido em 1951 por David Huffman trata-se de um algorítmo criado para comprensão de dados, ou seja, redução de número de bits necessários para representar uma informação.</p>
-  <p>Para compreender o funcionamento deste algorítmo é importante apresentar o termo Floresta, este é usado para designar um conjunto de árvores. É exatamente este o ponto de oartida para a formação da árvore de Huffman. Tenha em mente a seguinte situação: É desejado aplicar codificação de Huffman a um texto. Cada palavra será contabilizada em relação a sua frequência no texto e guardada em um vértice, estes serão alocados em um vector ordenado como árvores formando assim a floresta, isto feito, pares serão tomados para a construção da árvore e a dupla será substituída no vector pela sua união. Ao fim do procedimento, quando o vector tiver tamanho 1 a árvore de Huffman estará completa. Note que esta é construída de forma invertida, das folhas para a raiz.</p>
+  <p>Para compreender o funcionamento deste algorítmo é importante apresentar o termo Floresta, este é usado para designar um conjunto de árvores. É exatamente este o ponto de partida para a formação da árvore de Huffman. Tenha em mente a seguinte situação: É desejado aplicar codificação de Huffman a um texto. Cada palavra será contabilizada em relação a sua frequência no texto e guardada em um vértice, estes serão alocados em um vector ordenado como árvores formando assim a floresta, isto feito, pares serão tomados para a construção da árvore e a dupla será substituída no vector pela sua união. Ao fim do procedimento, quando o vector tiver tamanho 1 a árvore de Huffman estará completa. Note que esta é construída de forma invertida, das folhas para a raiz.</p>
   <p>Segue o pseudoalgorítmo para a construção da árvore de Huffman considerando o exemplo dado:</p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Huffman.png" height = "300px" width = "400px"></p>
   <p>Implementado desta maneira este algorítmo possui o custo computacional de O(n), sendo n o tamanho do vector F.</p>
 
 ## Funcionamento do algorítmo proposto
 
-  <p>Para solucionar o problema foi tomada a modelagem com um grafo não ordenado representado com base no modelo de Matriz de Incidência, para calcular a quantidade mínima de roteadores foram utilizadas técnicas da árvore de Huffman.</p>
+  <p>Para solucionar o problema foi tomada a modelagem com um grafo não orientado representado com base no modelo de Matriz de Incidência, para calcular a quantidade mínima de roteadores foram utilizadas técnicas da árvore de Huffman.</p>
   <p>Como problema modelo foi tomado o seguinte ambiente:</p>
+  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Grafo%20Modelo.PNG" height = "300px" width = "400px"></p>
   <p>As linhas internas indicam o grau de dificuldade para a propagação de sinal e as arestas a qualidade do mesmo entre cada vértice como indicado pela legenda. Todas as aplicações serão exemplificadas graficamente com base neste modelo.</p>
 
 ### A construção do grafo:
 
-  <p>Para fins de otimização de memória os vértices, representados pela classe Vertex, não possuem um vector de vértices pois toda a manpulação de dados toma por base as arestas, estas são representadas pela classe Edge tendo como dados os dois vértices ligados e a força do sinal, este varia de 1-5, sendo 1 a pior frequeência e 5 a melhor. Dentro da classe Graph, que representa o grafo, as arestas são alocadas em um vectores de suas respectivas classes.</p>
+  <p>Para fins de otimização de memória os vértices, representados pela classe Vertex, não possuem um vector de vértices pois toda a manipulação de dados toma por base as arestas, estas são representadas pela classe Edge tendo como dados os dois vértices ligados e a força do sinal, este varia de 1-5, sendo 1 a pior frequência e 5 a melhor. Dentro da classe Graph, que representa o grafo, as arestas são alocadas em vectores de suas respectivas classes.</p>
   <p>Na função main (arquivo main.cpp) é possível ver trechos de código comentado, estes são adaptações para que o algorítmo receba manualmente outros modelos de grafos.</p>
-  <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Grafo%20Modelo.PNG" height = "300px" width = "400px"></p>
   
 ### Funções cmp:
 
@@ -62,14 +63,15 @@
   
 ### Huffman e cálculo de roteadores:
 
-  <p>Este algorítmo vale-se em muito das técnicas de Huffman, diferenciando-se em suas condições de encerramento e na formação de uma árvore não binária.</p>
+  <p>Este algorítmo utiliza muito das técnicas de Huffman, diferenciando-se em suas condições de encerramento e na formação de uma árvore não binária.</p>
   <p>A princípio os vértices do grafo são armazenados como grafos no vector Forest, formando assim a Floresta Inicial. Após isto, o vector ordenado das arestas é utilizado para estabelecer as ligações entre os vértices.</p>
-  <p>Um loop é iniciado para calcular a quantidade mínima de roteadores necessária para cobrir a área mapeada pelo grafo inicial. Em cada interação o primeiro item do vértice das arestas é utilizado para buscar os vértices conectados. Um dos vértices precisa ser uma subgrafo com apenas um item pois ao mesclar subgrafos pontos cegos desconhecidos poderiam surgir. Ao encontrar um dos vértices atendendo a estas características o outro pode estar inserido em um subgrafo, um novo subgrafo é criado com os vértices dos dois subgrafos (o que possui v<sub>x</sub> e o que possui v<sub>y</sub>) e em seguida ambos são deletados e substituídos pelo novo. A cada interação o primeiro item do vértice das arestas é deletado. Há duas condições de encerramento para este loop, quando o vector Forest tiver tamanho igual a 2, condição em que há apenas duas áreas de cobertura, ou quando o valor da aresta analisada é menor ou igual a 2, sendo uma frequência muito baixa para garantir acesso à internet de qualidade. Seguem as ilustrações para a melhor compreensão do algorítmo:</p>
+  <p>Um loop é iniciado para calcular a quantidade mínima de roteadores necessária para cobrir a área mapeada pelo grafo inicial. Em cada interação o primeiro item do vértice das arestas é utilizado para buscar os vértices v<sub>x</sub> e v<sub>y</sub> conectados. Um dos vértices precisa ser uma subgrafo com apenas um item pois ao mesclar subgrafos pontos cegos desconhecidos poderiam surgir. Ao encontrar um dos vértices atendendo a esta característica o outro pode estar inserido em um subgrafo, um novo subgrafo é criado com os vértices dos dois subgrafos (o que possui v<sub>x</sub> e o que possui v<sub>y</sub>) e em seguida ambos são deletados e substituídos pelo novo. A cada interação o primeiro item do vértice das arestas é deletado. Há duas condições de encerramento para este loop, quando o vector Forest tiver tamanho igual a 2, condição em que há apenas duas áreas de cobertura, ou quando o valor da aresta analisada é menor ou igual a 2, sendo uma frequência muito baixa para garantir acesso à internet de qualidade. Seguem as ilustrações para a melhor compreensão do algorítmo:</p>
   
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Vector%20ordenado.png" height = "150px" width = "400px"></p>
   <p align="center"><img src="https://github.com/KemilyRezende/Trabalho---Grafos/blob/main/img/Funcionamento%20Huffman.png" height = "320px" width = "450px"></p>
   
-  <p>Após executar esta etapa são contabilizados os pontos cegos da área, ou seja, subgrafos de apenas um vértice restantes e são exibidas para o usuário a quantidade de roteadores necessários (Tamanho do vector Forest - quantidade de pontos cegos), as áreas de cobertura e quais são os pontos cegos. Para o problema modelo os resultados são:p>
+  <p>Após executar esta etapa são contabilizados os pontos cegos da área, ou seja, subgrafos de apenas um vértice restantes e são exibidas para o usuário a quantidade de roteadores necessários (Tamanho do vector Forest - quantidade de pontos cegos), as áreas de cobertura e quais são os pontos cegos. </p>
+  <p>Para o problema modelo foram consideradosum grafo com 6 vértices com ligações v1-v2, v1-v3, v1-v4, v2-v4, v3-v4, v3-v5, v4-v5, v4-v6 e v5-v6 com os respectivos pesos 5, 2, 2, 2, 5, 3, 4, 1 e 1. Os resultados para este modelo de grafo foram:p>
   <p>   São necessários 2 roteadores.</p>
   <p>   Área de cobertura 1: vértice 2, vértice 1</p>
   <p>   Área de cobertura 2: vértice 4, vértice 3, vértice 5</p>
@@ -83,4 +85,4 @@
 ## Referências
 
 <p>ROSEN, Kenneth H. . Matemática Discreta e Suas Aplicações. Sexta Edição. AMGH Editora ltda. 2009.</p>
-<p>CÓDIGO DE HUFFMAN. Instituto de Matmática e Estatística da Universidade de São Paulo. Disponível em: https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/huffman.html . Último acesso: 25/11/2022</p>
+<p>CÓDIGO DE HUFFMAN. Instituto de Matemática e Estatística da Universidade de São Paulo. Disponível em: https://www.ime.usp.br/~pf/analise_de_algoritmos/aulas/huffman.html . Último acesso: 25/11/2022</p>
