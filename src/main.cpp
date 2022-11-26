@@ -181,6 +181,7 @@ int main(){
 	int values, aux = 1; //
 	//int v1, v2, signal, op = 0;
 	cout << "V�rtices no Grafo: 6";
+	//cin >> values;
 	values = 6;
 	for (int i = 0; i < values; i++){
 		Vertex v;
